@@ -40,6 +40,7 @@ describe Flowcell do
       {
 
         "flowcell_barcode" => "12345678903",
+        "reagent_kit_barcode" => "MS0000000-000V2",
         "flowcell_id" => "1123",
         "forward_read_length" => 222,
         "reverse_read_length" => 222,

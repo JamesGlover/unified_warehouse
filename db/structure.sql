@@ -68,6 +68,7 @@ CREATE TABLE `iseq_flowcell` (
   `manual_qc` tinyint(1) DEFAULT NULL COMMENT 'Manual QC decision, NULL for unknown',
   `external_release` tinyint(1) DEFAULT NULL COMMENT 'Defaults to manual qc value; can be changed by the user later',
   `flowcell_barcode` varchar(15) DEFAULT NULL COMMENT 'Manufacturer flowcell barcode or other identifier',
+  `reagent_kit_barcode` varchar(30) DEFAULT NULL COMMENT 'The barcode for the reagent kit or cartridge',
   `id_flowcell_lims` varchar(20) NOT NULL COMMENT 'LIMs-specific flowcell id, batch_id for Sequencescape',
   `position` smallint(2) unsigned NOT NULL COMMENT 'Flowcell lane number',
   `entity_type` varchar(30) NOT NULL COMMENT 'Lane type: library, pool, library_control, library_indexed, library_indexed_spike',
@@ -240,7 +241,7 @@ CREATE TABLE `study_users` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-07-23 12:18:20
+-- Dump completed on 2015-08-19 13:20:57
 INSERT INTO schema_migrations (version) VALUES ('20141113110635');
 
 INSERT INTO schema_migrations (version) VALUES ('20141113130813');
@@ -262,4 +263,6 @@ INSERT INTO schema_migrations (version) VALUES ('20150401145741');
 INSERT INTO schema_migrations (version) VALUES ('20150401150636');
 
 INSERT INTO schema_migrations (version) VALUES ('20150601112933');
+
+INSERT INTO schema_migrations (version) VALUES ('20150819120400');
 
